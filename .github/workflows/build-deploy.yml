@@ -24,7 +24,7 @@ jobs:
     env:
       DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
       DATABASE_PORT: ${{secrets.DATABASE_PORT}}
-      DATABASE_PASSWORD:         
+      DATABASE_PASSWORD: "    "      
       DATABASE_NAME: ${{secrets.DATABASE_NAME}}  
       DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}  
       SECRET_KEY: ${{secrets.SECRET_KEY}}  
@@ -35,7 +35,7 @@ jobs:
       postgres:
         image: postgres
         env:
-          POSTGRES_PASSWORD:    
+          POSTGRES_PASSWORD: "    "
           POSTGRES_DB : ${{secrets.DATABASE_NAME}}_test
         ports:
           - 5432:5432
