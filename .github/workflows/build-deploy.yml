@@ -1,0 +1,28 @@
+name: Build and Deploy Code
+
+
+# it run our code in all scenario(push and pull) and on each branch possible 
+on: [push, pull_request]
+
+
+# push or pull any on the specified branch it run our code
+# on: 
+#   push:
+#     branched:
+#       - "main"
+#       - "anotherbranch"
+
+#   pull_request:
+#     branch:
+#       - "main"   
+
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: pulling git repo
+        uses: actions/checkout@v2
+      - name: say hi to naman
+        run: echo "hello naman"
+          
